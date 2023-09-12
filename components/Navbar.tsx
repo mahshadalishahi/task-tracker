@@ -21,8 +21,10 @@ const Navbar: React.FC = () =>  {
       {open && 
         <Modal onClickCancel={()=> setOpen(false)} 
                onClickOk={()=> {
+                 if(!!title){
                   create(title,status)
                   setOpen(false)
+                }
                 }}>
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="title">
